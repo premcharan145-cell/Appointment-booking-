@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MediFlow – Appointment Booking System (Full Stack)
 
 MediFlow is a full-stack appointment booking platform that lets **customers** book
@@ -239,6 +238,3 @@ Final/
 ├── gateway/                      FastAPI reverse proxy (deployment)
 └── taskservices/                 Node helper service (deployment)
 ```
-=======
-# Appointment-booking-
->>>>>>> 1062d120778324c1c173ae10eb6e2d356e1cd87b
