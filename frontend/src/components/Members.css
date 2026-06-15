@@ -1,0 +1,293 @@
+/* Light-themed lecturer directory ("Members") page — scoped to .members-page */
+
+.members-page {
+    background: #f4f6fb;
+    color: #1f2937;
+    margin: -28px;
+    padding: 28px 32px 40px;
+    min-height: 100%;
+    border-radius: 12px;
+}
+
+.members-page .mp-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.members-page .mp-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.members-page .mp-subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 4px 0 0;
+}
+
+.members-page .mp-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+}
+.members-page .mp-filter-btn:hover { background: #1d4ed8; }
+
+.members-page .mp-search {
+    margin-bottom: 22px;
+}
+.members-page .mp-search input {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #1f2937;
+    background: #fff;
+    outline: none;
+}
+.members-page .mp-search input:focus { border-color: #2563eb; }
+
+.members-page .mp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.members-page .mp-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.members-page .mp-card:hover {
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+    transform: translateY(-2px);
+}
+
+.members-page .mp-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.members-page .mp-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+}
+.members-page .mp-subject {
+    font-size: 12.5px;
+    color: #2563eb;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+
+.members-page .mp-field-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #9ca3af;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.members-page .mp-field-value {
+    font-size: 12.5px;
+    color: #374151;
+    margin-top: 2px;
+}
+
+.members-page .mp-book-btn {
+    margin-top: 16px;
+    width: 100%;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 0;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.members-page .mp-book-btn:hover { background: #1d4ed8; }
+
+.members-page .mp-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 50px 0;
+    grid-column: 1 / -1;
+}
+
+.members-page .mp-note {
+    margin-top: 26px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    color: #1e40af;
+    font-size: 12.5px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Booking modal (light) */
+.members-page .mp-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.members-page .mp-modal {
+    background: #fff;
+    border-radius: 14px;
+    width: 420px;
+    max-width: calc(100vw - 32px);
+    padding: 22px 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+.members-page .mp-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.members-page .mp-modal-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #111827;
+}
+.members-page .mp-modal-close {
+    cursor: pointer;
+    color: #6b7280;
+    line-height: 0;
+}
+.members-page .mp-modal-sub {
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 14px;
+}
+.members-page .mp-form-field { margin-bottom: 12px; }
+.members-page .mp-form-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 5px;
+}
+.members-page .mp-form-field input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #1f2937;
+    background: #fff;
+    outline: none;
+}
+.members-page .mp-form-field input:focus { border-color: #2563eb; }
+.members-page .mp-confirm-btn {
+    margin-top: 6px;
+    width: 100%;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.members-page .mp-confirm-btn:hover { background: #1d4ed8; }
+
+/* Booked-appointments list (Book Appointment page) */
+.members-page .mp-appt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.members-page .mp-appt-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.members-page .mp-appt-info { display: flex; align-items: center; gap: 14px; }
+.members-page .mp-appt-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+.members-page .mp-appt-name { font-weight: 700; color: #111827; font-size: 14px; }
+.members-page .mp-appt-subject { color: #2563eb; font-size: 12px; font-weight: 600; }
+.members-page .mp-appt-when { color: #4b5563; font-size: 12.5px; margin-top: 3px; }
+
+.members-page .mp-appt-right { display: flex; align-items: center; gap: 14px; }
+.members-page .mp-status {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+.members-page .mp-status.pending   { background: #fef3c7; color: #92400e; }
+.members-page .mp-status.confirmed { background: #d1fae5; color: #065f46; }
+.members-page .mp-status.completed { background: #dbeafe; color: #1e40af; }
+.members-page .mp-status.cancelled { background: #fee2e2; color: #991b1b; }
+.members-page .mp-cancel-btn {
+    background: #fff;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.members-page .mp-cancel-btn:hover { background: #fef2f2; }
+
